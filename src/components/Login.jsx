@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ButtonForm, CampoDiv, InputForm, LoginDiv, LogoDiv } from '../styles/LoginStyles';
+import { ButtonForm, CampoDiv, InputForm, LinkForm, LoginDiv, LogoDiv } from '../styles/LoginStyles';
 import Swal from 'sweetalert2'
 import axios from 'axios';
 
@@ -104,6 +104,9 @@ export default class Login extends Component {
                   </CampoDiv>
                   <ButtonForm type="submit">Iniciar Sesión</ButtonForm>
               </form>
+              <LinkForm>
+                <a href="/registro">No tengo una cuenta</a>
+            </LinkForm>
           </LoginDiv>
         );
 

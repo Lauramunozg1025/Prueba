@@ -45,7 +45,7 @@ export default class Login extends Component {
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
-                    text: 'El usuario no existe!',
+                    text: 'El usuario o contraseña es incorrecto!',
                   })
             }
             else if (usuarioIsReal !== "") {
@@ -54,11 +54,11 @@ export default class Login extends Component {
                     window.location.href = "/home"
 
                 }
-                else {
+                else if(usuarioIsReal.contraseña !== this.state.form.contraseña){
                     Swal.fire({
                         icon: 'error',
                         title: 'Oops...',
-                        text: 'contraseña incorrecta!',
+                        text: 'El usuario o contraseña es incorrecto',
                       })
                 }
             }

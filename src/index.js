@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './containers/App';
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import App from './containers/App';
+import AppRouter from './routers/AppRouter'
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppRouter />
   </React.StrictMode>,
   document.getElementById('root')
 );

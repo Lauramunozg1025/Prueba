@@ -66,7 +66,7 @@ const Registro = () => {
                     />
                 </CampoDiv>
                 <CampoDiv>
-                    <i className="bi bi-person-circle"></i>
+                    <i className="bi bi-at"></i>
                     <InputForm
                         type="email"
                         name="correo"

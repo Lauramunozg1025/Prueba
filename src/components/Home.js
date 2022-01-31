@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Nav from './Nav';
+import Nav from './NavPrincipal';
 import Tabs from './Tabs';
 
 const Background = styled.div`
@@ -15,7 +15,7 @@ const DivHeader = styled.div`
 `
 
 const H1 = styled.h1 `
-  font-size: 34px;
+  font-size: 30px;
   font-weight:bold;
   padding: 15px 10px;
 `

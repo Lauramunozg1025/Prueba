@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styleds/Tab.css";
 import styled from 'styled-components'
+import {Link} from 'react-router-dom'
 
 const DivProducto = styled.div`
   background-color: white;
@@ -21,6 +22,7 @@ const InfoProducto = styled.div`
   & h5 {
     font-size: 17px;
     font-weight: 600;
+    color: black;
   }
 
   & span {
@@ -64,13 +66,15 @@ function Tabs() {
         <div
           className={toggleState === 1 ? "content  active-content" : "content"}
         >
-          <DivProducto>
-            <img src="https://res.cloudinary.com/dvtpbvs4w/image/upload/v1643522517/Sprint-02/Guappjalota1.png" alt="Guappjolota-Verde" width="80" height="80"/>
-            <InfoProducto>
-              <h5>Verde</h5>
-              <span>$25 MXN</span>
-            </InfoProducto>
-          </DivProducto>
+          <Link to='/info-producto' style={{textDecoration: "none"}}>
+              <DivProducto>
+                <img src="https://res.cloudinary.com/dvtpbvs4w/image/upload/v1643522517/Sprint-02/Guappjalota1.png" alt="Guappjolota-Verde" width="80" height="80"/>
+                <InfoProducto>
+                  <h5>Verde</h5>
+                  <span>$25 MXN</span>
+                </InfoProducto>
+              </DivProducto>
+          </Link>
 
         </div>
 

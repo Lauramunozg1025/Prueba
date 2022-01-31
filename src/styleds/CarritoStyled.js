@@ -81,6 +81,11 @@ export const Footer = styled.footer `
 
 `
 
+export const ImagenModal = styled.img`
+    background: black;
+    
+`
+
 
 
 

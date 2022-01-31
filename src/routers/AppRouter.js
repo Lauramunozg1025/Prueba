@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
+import {InfoProducto} from '../components/InfoProducto';
 import Carrito from '../components/Carrito';
 import Home from '../components/Home';
-import {InfoProducto} from '../components/InfoProducto';
 import Login from "../components/Login";
 import Registro from "../components/Registro";
 

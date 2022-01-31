@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Sprint-02/static/css/main.33d8d472.css",
+    "main.js": "/Sprint-02/static/js/main.e30456a4.js",
+    "index.html": "/Sprint-02/index.html",
+    "main.33d8d472.css.map": "/Sprint-02/static/css/main.33d8d472.css.map",
+    "main.e30456a4.js.map": "/Sprint-02/static/js/main.e30456a4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.33d8d472.css",
+    "static/js/main.e30456a4.js"
+  ]
+}

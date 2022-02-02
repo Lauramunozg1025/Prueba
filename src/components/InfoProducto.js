@@ -7,9 +7,8 @@ import {Link} from 'react-router-dom'
 
 const Background = styled.div`
     background-color: #F2F2F2;
-    width: 100%;
-    height: 100%;
-    min-height: 100%;
+    /* height: 590px; */
+    /* overflow: hidden; */
 `
 
 const Footer = styled.footer `

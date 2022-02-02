@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const Background = styled.div`
     background-color: #F2F2F2;
-    height: 100vh;
-    min-height: 100%;
+    height: 590px;
     overflow: hidden;
     position: relative;
 

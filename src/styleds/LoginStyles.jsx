@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const LoginDiv = styled.div`
     background: #fff;
     border-radius: 16px;
-    width: 450px;
+    width: 360px;
+    height: 590px;
     padding: 30px;
     margin: 80px auto;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
@@ -12,7 +13,8 @@ export const LoginDiv = styled.div`
 export const RegistroDiv = styled.div`
     background: #fff;
     border-radius: 16px;
-    width: 450px;
+    width: 360px;
+    height: 590px;
     padding: 30px;
     margin: 35px auto;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);

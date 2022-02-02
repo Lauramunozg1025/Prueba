@@ -5,7 +5,7 @@ import Tabs from './Tabs';
 
 const Background = styled.div`
     background-color: #F2F2F2;
-    height: 100%;
+    height: 590px;
     overflow: hidden;
 `
 

@@ -6,34 +6,44 @@ import '../styleds/prducto.css';
 const Producto = () => {
 
   return <div>
-    <div class="container">
-    <ul class="slides">
+    <div className="container">
+    <ul className="slides">
         <li id="slide1">
-            <img src="https://res.cloudinary.com/dvtpbvs4w/image/upload/v1643522517/Sprint-02/Guappjalota1.png" alt="" />
-            <h1>Guajolota de <br/> Tamal Verde</h1>
-            <span>$25 MXN</span>
+            <div>
+                <img src="https://res.cloudinary.com/dvtpbvs4w/image/upload/v1643522517/Sprint-02/Guappjalota1.png" alt="" />
+                <h1>Guajolota de <br/> Tamal Verde</h1>
+                <span>$25 MXN</span>
+            </div>
         </li>
         <li id="slide2">
-            <img src="https://res.cloudinary.com/dvtpbvs4w/image/upload/v1643474121/Sprint-02/Bebidas1_nvacus.png" alt="" />
-            <h1>Guajolota de <br/> Tamal de Mole</h1>
-            <span>$25 MXN</span>
+            <div>
+                <img src="https://res.cloudinary.com/dvtpbvs4w/image/upload/v1643474121/Sprint-02/Bebidas1_nvacus.png" alt="" />
+                <h1>Guajolota de <br/> Tamal de Mole</h1>
+                <span>$25 MXN</span>
+            </div>
         </li>
         <li id="slide3">
-            <img src="https://res.cloudinary.com/dvtpbvs4w/image/upload/v1643474121/Sprint-02/Tamal1_mvwxla.png" alt="" width="16"/>
-            <h1>Guajolota de <br/> Tamal de Guayaba</h1>
-            <span>$25 MXN</span>
+            <div>
+                <img src="https://res.cloudinary.com/dvtpbvs4w/image/upload/v1643474121/Sprint-02/Tamal1_mvwxla.png" alt="" width="16"/>
+                <h1>Guajolota de <br/> Tamal de Guayaba</h1>
+                <span>$25 MXN</span>
+            </div>
         </li>
 
         <li id="slide4">
-            <img src="https://res.cloudinary.com/dvtpbvs4w/image/upload/v1643522517/Sprint-02/Guappjalota1.png" alt="" />
-            <h1>Guajolota de <br/> Tamal de Piña</h1>
-            <span>$2 MXN</span>
+            <div>
+                <img src="https://res.cloudinary.com/dvtpbvs4w/image/upload/v1643522517/Sprint-02/Guappjalota1.png" alt="" />
+                <h1>Guajolota de <br/> Tamal de Piña</h1>
+                <span>$2 MXN</span>
+            </div>
         </li>
 
         <li id="slide5">
-            <img src="https://res.cloudinary.com/dvtpbvs4w/image/upload/v1643474121/Sprint-02/Bebidas1_nvacus.png" alt="" />
-            <h1>Guajolota de <br/> Tamal de Pasas</h1>
-            <span>$2 MXN</span>
+            <div>
+                <img src="https://res.cloudinary.com/dvtpbvs4w/image/upload/v1643474121/Sprint-02/Bebidas1_nvacus.png" alt="" />
+                <h1>Guajolota de <br/> Tamal de Pasas</h1>
+                <span>$2 MXN</span>
+            </div>
             </li>
     </ul>
 
@@ -41,7 +51,7 @@ const Producto = () => {
     <h6>Sabor</h6>
     
 
-    <ul class="thumbnails">
+    <ul className="thumbnails">
             <li>
                 <a href="#slide1"><img src="https://res.cloudinary.com/dvtpbvs4w/image/upload/v1643522517/Sprint-02/Guappjalota1.png" /></a>
             </li>

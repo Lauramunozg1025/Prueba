@@ -25,8 +25,6 @@ const Registro = () => {
         })
     }
 
-    console.log(registro);
-
     const postData = () => {
         if (nombre === "" || correo === "" || nombre_usuario === "" || contraseña === "") {
             Swal.fire({

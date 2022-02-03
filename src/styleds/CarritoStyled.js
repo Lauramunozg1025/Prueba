@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Background = styled.div`
     background-color: #F2F2F2;
     height: 590px;
-    overflow: hidden;
-    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
 
     & a{
         text-decoration: none;
@@ -64,6 +64,7 @@ export const Total = styled.div`
 `
 
 export const Footer = styled.footer `
+  height: 390px;
   position: absolute;
   bottom: 0;
 

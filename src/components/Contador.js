@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+// estilos del contador 
+
 const DivContador = styled.div `
   width: 190px;
   height: 72px;
@@ -26,9 +28,12 @@ const Contador = () => {
 
   const [contador, setContador] = useState(1);
 
+// suma del contador
   const handleAdd = () => {
     setContador(contador + 1)
   }
+
+  // resta del contador
 
   const handleRest = () => {
     setContador(contador - 1)

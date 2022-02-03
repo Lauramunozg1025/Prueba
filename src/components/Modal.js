@@ -27,6 +27,7 @@ const ModalCarrito = () => {
             <Modal.Title>Guajalota de Tamal Verde</Modal.Title> <br/>
         </Modal.Header>
         
+        {/* Aqui se pintaria el producto que se quiere actualizar  */}
         <Modal.Body >
           <img style={{margin: "0 90px" }} src="https://res.cloudinary.com/dvtpbvs4w/image/upload/v1643522517/Sprint-02/Guappjalota1.png" alt="Guappjolota-Verde" width="100" height="100"/>
           <h2 style={{color: "tomato", textAlign: "center" }}>$50 MNX</h2>

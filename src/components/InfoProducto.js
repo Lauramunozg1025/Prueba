@@ -7,8 +7,9 @@ import {Link} from 'react-router-dom'
 
 const Background = styled.div`
     background-color: #F2F2F2;
-    /* height: 590px; */
-    /* overflow: hidden; */
+    height: 590px;
+    overflow-y: auto;
+    overflow-x: hidden;
 `
 
 const Footer = styled.footer `
@@ -35,6 +36,11 @@ const Footer = styled.footer `
 `
 
 export const InfoProducto = () => {
+
+  const capturarDatos = () => {
+    console.log("capturando")
+  }
+
   return (
   <Background>
       <Nav />
@@ -42,7 +48,7 @@ export const InfoProducto = () => {
       <Guajolocombo />
       <Footer>
         <Link to='/carrito'>
-          <button>
+          <button onClick={capturarDatos}>
             Agregar 1 al carrito <span>$14.00</span>
           </button>
         </Link>

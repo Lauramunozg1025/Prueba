@@ -6,7 +6,8 @@ import Tabs from './Tabs';
 const Background = styled.div`
     background-color: #F2F2F2;
     height: 590px;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 `
 
 const DivHeader = styled.div`

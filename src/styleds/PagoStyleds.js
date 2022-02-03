@@ -16,11 +16,11 @@ export const FormCampo = styled.div`
 `
 
 export const FormInput = styled.input`
+    background: white;
     padding: 5px 10px;
     width: 100%;
-    background: #f2f2f2;
     border-radius: 50px;
-    border: .5px solid;
+    border: 0.5px solid;
     display: flex;
 `
 

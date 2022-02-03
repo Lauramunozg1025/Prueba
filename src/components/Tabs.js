@@ -60,7 +60,7 @@ function Tabs() {
         </button>
       </div>
 
-      <div className="content-tabs" class="content-prueba" onClick={handleCapturarDatos}>
+      <div className="content-tabs" onClick={handleCapturarDatos}>
         <div className={toggleState === 1 ? "content  active-content" : "content"}  >
           {/* Aqui en este link se pintan los productos guappjolotas del home */}
           <Link to='/home' style={{textDecoration: "none"}}>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Contador from './Contador'
 import { Button, Modal } from 'react-bootstrap';
-import {Cards, Info, Nombre, Cantidad, Precio, ImagenModal} from '../styleds/CarritoStyled'
+import {Cards, Info, Nombre, Cantidad, Precio} from '../styleds/CarritoStyled'
 
 const ModalCarrito = () => {
 

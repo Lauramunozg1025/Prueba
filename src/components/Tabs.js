@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styleds/Tab.css";
 import {Link} from 'react-router-dom'
 import styled from "styled-components";
+import { urlGuappjolotas, urlTamales, urlBebidas } from '../helpers/url'
 
 
 const DivProducto = styled.div`
@@ -34,6 +35,9 @@ const InfoProducto = styled.div`
 
 function Tabs() {
   const [toggleState, setToggleState] = useState(1);
+  const [guappjolotas, setGuappjolotas] = useState([]);
+  const [tamales, setTamales] = useState([]);
+  const [bebidas, setBebidas] = useState([]);
 
   const toggleTab = (index) => {
     setToggleState(index);
@@ -44,8 +48,35 @@ function Tabs() {
 
   }
 
+  useEffect(() => {
+    getGuappjolotas()
+    getTamales()
+    getBebida()
+  }, [])
+
+  const getGuappjolotas = async() => {
+    const resp = await fetch(urlGuappjolotas)
+    const data = await resp.json()
+    setGuappjolotas(data)
+}
+
+const getTamales = async() => {
+  const resp = await fetch(urlTamales)
+  const data = await resp.json()
+  setTamales(data)
+}
+
+const getBebida = async() => {
+  const resp = await fetch(urlBebidas)
+  const data = await resp.json()
+  setBebidas(data)
+}
+
+
+
 
   return (
+    
     <div className="container">
       {/* Este es el tab del home que pasa por los productos guappjolotas , bebidas y tamales y los pinta aparte */}
       <div className="bloc-tabs">
@@ -63,42 +94,56 @@ function Tabs() {
       <div className="content-tabs" onClick={handleCapturarDatos}>
         <div className={toggleState === 1 ? "content  active-content" : "content"}  >
           {/* Aqui en este link se pintan los productos guappjolotas del home */}
-          <Link to='/home' style={{textDecoration: "none"}}>
-              <DivProducto>
-                <img src="https://res.cloudinary.com/dvtpbvs4w/image/upload/v1643522517/Sprint-02/Guappjalota1.png" alt="Guappjolota-Verde" width="80" height="80" name="img" />
-                <InfoProducto>
-                  <h5>Verde</h5>
-                  <span>$25 MXN</span>
-                </InfoProducto>
-              </DivProducto>
-          </Link>
+
+          {
+            guappjolotas.map(producto => (
+              <Link to='/info-producto' style={{textDecoration: "none"}} key={producto.id}>
+                <DivProducto>
+                  <img src={producto.imagen} alt="Guappjolota-Verde" width="80" height="80" name="img" />
+                  <InfoProducto>
+                    <h5>{producto.sabor}</h5>
+                    <span>${producto.precio} MXN</span>
+                  </InfoProducto>
+                </DivProducto>
+              </Link>
+            ))
+          }
 
         </div>
 
         <div className={toggleState === 2 ? "content  active-content" : "content"} >
            {/* Aqui en este link se pintan los productos Bebidas del home */}
-          <Link to='/info-producto' style={{textDecoration: "none"}}>
-              <DivProducto>
-                <img src="https://res.cloudinary.com/dvtpbvs4w/image/upload/v1643474121/Sprint-02/Bebidas1_nvacus.png" alt="Guappjolota-Verde" width="80" height="80"/>
-                <InfoProducto>
-                  <h5>Champurrado</h5>
-                  <span>$12 MXN</span>
-                </InfoProducto>
-              </DivProducto>
-            </Link>
+            {
+              bebidas.map (producto => (
+                <Link to='/info-producto' style={{textDecoration: "none"}} key={producto.id}>
+                <DivProducto>
+                  <img src={producto.imagen} alt="Guappjolota-Verde" width="80" height="80"/>
+                  <InfoProducto>
+                    <h5>{producto.sabor}</h5>
+                    <span>${producto.precio} MXN</span>
+                  </InfoProducto>
+                </DivProducto>
+              </Link>
+              ))
+            }
         </div>
 
         <div className={toggleState === 3 ? "content  active-content" : "content"} >
            {/* Aqui en este link se pintan los productos tamales del home */}
-            <Link to='/info-producto' style={{textDecoration: "none"}}>
+           {
+            tamales.map(producto => (
+              <Link to="/info-producto" style={{textDecoration: "none"}} key={producto.id}>
               <DivProducto>
-                <img src="https://res.cloudinary.com/dvtpbvs4w/image/upload/v1643474121/Sprint-02/Tamal1_mvwxla.png" alt="Guappjolota-Verde" width="80" height="80"/>
+                <img src={producto.imagen} alt="Guappjolota-Verde" width="80" height="80"/>
                 <InfoProducto>
-                  <h5>Verde</h5>
-                  <span>$14 MXN</span>
+                  <h5>Tamal de {producto.sabor}</h5>
+                  <span>${producto.precio} MXN</span>
                 </InfoProducto>
               </DivProducto>
             </Link>
+            ))
+           }
+            
         </div>
       </div>
     </div>

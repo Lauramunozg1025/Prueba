@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ButtonForm, CampoDiv, InputForm, LinkForm, LogoDiv, RegistroDiv } from '../styleds/LoginStyles';
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import { urlUsuarios } from '../helpers/url'
 
 const Registro = () => {
 
@@ -34,7 +35,7 @@ const Registro = () => {
               })
         }
         else {
-            axios.post('https://guappjolotas-users.herokuapp.com/usuarios', registro)
+            axios.post(urlUsuarios, registro)
                 .then(resp => {
                     Swal.fire({
                         icon: 'success',

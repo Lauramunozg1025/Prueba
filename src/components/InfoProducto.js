@@ -37,10 +37,6 @@ const Footer = styled.footer `
 
 export const InfoProducto = () => {
 
-  const capturarDatos = () => {
-    console.log("capturando")
-  }
-
   return (
   <Background>
       <Nav />
@@ -48,7 +44,7 @@ export const InfoProducto = () => {
       <Guajolocombo />
       <Footer>
         <Link to='/carrito'>
-          <button onClick={capturarDatos}>
+          <button>
             Agregar 1 al carrito <span>$14.00</span>
           </button>
         </Link>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { ButtonForm, CampoDiv, InputForm, LinkForm, LoginDiv, LogoDiv } from '../styleds/LoginStyles';
 import Swal from 'sweetalert2'
 import axios from 'axios';
+import { urlUsuarios } from '../helpers/url'
 
 export default class Login extends Component {
     constructor() {
@@ -30,7 +31,7 @@ export default class Login extends Component {
     }
 
     IniciarSesion = async () => {
-        await axios.get('https://guappjolotas-users.herokuapp.com/usuarios/', {
+        await axios.get(urlUsuarios, {
             params: {
                 nombre_usuario: this.state.form.nombre_usuario,
                 contraseña: this.state.form.contraseña

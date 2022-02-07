@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Nav from './NavPrincipal';
 import Tabs from './Tabs';
@@ -21,17 +22,17 @@ const H1 = styled.h1 `
   padding: 15px 10px;
 `
 
-const InputSearch = styled.input`
-  width: 80%;
-  height: 50px;
-  background-color: rgba(58, 58, 58, 0.110);
-  border-radius: 50px;
-  border: 0;
-  text-align: center;
-  text-overflow: ellipsis;
-  font-size: 17px;
-  margin-top: 20px;
-`
+// const InputSearch = styled.input`
+//   width: 80%;
+//   height: 50px;
+//   background-color: rgba(58, 58, 58, 0.110);
+//   border-radius: 50px;
+//   border: 0;
+//   text-align: center;
+//   text-overflow: ellipsis;
+//   font-size: 17px;
+//   margin-top: 20px;
+// `
 
 const DivImg = styled.div `
   width: 360px; 
@@ -71,6 +72,28 @@ const Img = styled.img`
     }
 `
 
+const DivSearch = styled.div`
+  width: 80%;
+  height: 50px;
+  background-color: rgba(58, 58, 58, 0.110);
+  border-radius: 50px;
+  border: 0;
+  text-align: center;
+  text-overflow: ellipsis;
+  font-size: 17px;
+  margin: 20px auto;
+`
+
+const InputSearch = styled.input`
+  background: none;
+  border-radius: 50px;
+  border: 0;
+  text-overflow: ellipsis;
+  font-size: 17px;
+  margin: 10px;
+  outline: none;
+`
+
 export default class Home extends Component {
   render() {
     return (
@@ -81,7 +104,14 @@ export default class Home extends Component {
       <Nav />
       <DivHeader>
         <H1>Nada como una Guapjalota para empezar el dia</H1>
-        <InputSearch placeholder='Sabor de guajolota, bebida o tamal'/>
+        <Link to="/search" style={{color: "black"}}>
+          <DivSearch>
+            <svg width="17" height="17" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+            <InputSearch placeholder='Sabor de guajolota, bebida o tamal' />
+          </DivSearch>
+        </Link>
       </DivHeader>
       <Tabs />
   </Background>);

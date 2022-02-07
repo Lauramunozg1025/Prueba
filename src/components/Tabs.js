@@ -33,6 +33,7 @@ const InfoProducto = styled.div`
   }
 `
 
+
 function Tabs() {
   const [toggleState, setToggleState] = useState(1);
   const [guappjolotas, setGuappjolotas] = useState([]);
@@ -42,11 +43,6 @@ function Tabs() {
   const toggleTab = (index) => {
     setToggleState(index);
   };
-
-  const handleCapturarDatos = async ({ target }) => {
-    console.log( target );
-
-  }
 
   useEffect(() => {
     getGuappjolotas()
@@ -72,12 +68,16 @@ const getBebida = async() => {
   setBebidas(data)
 }
 
+  const handleCapturarDatos = async ({ target }) => {
+    console.log( target );
 
+  }
 
 
   return (
     
     <div className="container">
+      
       {/* Este es el tab del home que pasa por los productos guappjolotas , bebidas y tamales y los pinta aparte */}
       <div className="bloc-tabs">
         <button className={toggleState === 1 ? "tabs active-tabs" : "tabs"} onClick={() => toggleTab(1)} >
@@ -97,7 +97,7 @@ const getBebida = async() => {
 
           {
             guappjolotas.map(producto => (
-              <Link to='/info-producto' style={{textDecoration: "none"}} key={producto.id}>
+              <Link to='/home' style={{textDecoration: "none"}} key={producto.id}>
                 <DivProducto>
                   <img src={producto.imagen} alt="Guappjolota-Verde" width="80" height="80" name="img" />
                   <InfoProducto>
